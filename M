@@ -1,0 +1,39 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Fizik notu ");
+        double a = scan.nextDouble();
+        System.out.print("Matematik notu");
+        double b = scan.nextDouble();
+        System.out.print("Turkce notu ");
+        double d = scan.nextDouble();
+        System.out.print("Kimya notu");
+        double r = scan.nextDouble();
+        System.out.print("Music Notu:");
+        double e = scan.nextDouble();
+        if(a >= 0 && a<= 100 && b >= 0 && b<= 100 && d >= 0 && d <= 100 && r >= 0 && r <= 100 && e <= 100 && e >=0){
+            GradeChecker(a,b,d,r,e);
+        }
+
+
+    }
+
+    public static void GradeChecker(double Phsysic, double Mathematic, double Grammer, double Chem, double Music) {
+        double NewGrade = (Phsysic+Mathematic+Grammer+Chem+ Music)%5;
+        if (NewGrade> 55 ){
+            System.out.print("Geçti");
+
+        }
+        else{
+            System.out.print("Kaldı");
+        }
+    }
+
+
+
+}
